@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Wifi, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -37,6 +38,9 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <Link to="/privacy-policy" className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
+              Privacy Policy
+            </Link>
             <a href="#download" className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg shadow-primary-500/20 transform hover:-translate-y-0.5">
               Download App
             </a>
@@ -69,6 +73,13 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <Link 
+                to="/privacy-policy" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-gray-600 hover:text-primary-600 font-medium"
+              >
+                Privacy Policy
+              </Link>
               <a 
                 href="#download" 
                 onClick={() => setIsMobileMenuOpen(false)}
