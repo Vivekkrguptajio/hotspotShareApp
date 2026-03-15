@@ -24,7 +24,7 @@ const ContactSection = () => {
             </div>
             <div className="text-left whitespace-nowrap">
               <span className="block text-sm text-gray-500 font-medium mb-0.5">Email Support</span>
-              <span className="block font-semibold text-gray-900 group-hover:text-primary-700 transition-colors">vivekkumarguptajio@gmail.com</span>
+              <span className="block font-semibold text-gray-900 group-hover:text-primary-700 transition-colors">p8drblwwq@mozmail.com</span>
             </div>
           </a>
 
