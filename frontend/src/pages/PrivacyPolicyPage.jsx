@@ -179,10 +179,10 @@ const PrivacyPolicyPage = () => {
               or the App, please contact us at:
             </p>
             <p className="mb-1">
-              <strong>Email:</strong> <a href="mailto:vivekkumarguptajio@gmail.com" className="text-primary-600 hover:underline">vivekkumarguptajio@gmail.com</a>
+              <strong>Email:</strong> <a href="mailto:p8drblwwq@mozmail.com" className="text-primary-600 hover:underline">p8drblwwq@mozmail.com</a>
             </p>
             <p>
-              <strong>Developer:</strong> Vivek Kumar Gupta
+              <strong>Developer:</strong> Team Hotspot Share
             </p>
           </section>
         </div>
