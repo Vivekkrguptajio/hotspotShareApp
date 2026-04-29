@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Smartphone, Monitor, ArrowRightLeft } from 'lucide-react';
+import { Download, Smartphone, Monitor } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -40,7 +40,9 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a 
-                href="#download"
+                href="https://drive.google.com/file/d/1LXyMS8faFp5AqLimBKfPMsUyLt7XKdDs/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all shadow-xl shadow-primary-500/30 transform hover:-translate-y-1"
               >
                 <Download size={20} />
@@ -68,38 +70,42 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="relative w-full max-w-md mx-auto aspect-square">
-              {/* App Logo Placeholder & Animation Base */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-200 to-white rounded-[3rem] shadow-2xl transform rotate-6 scale-105 border-4 border-white"></div>
-              <div className="absolute inset-0 bg-white rounded-[3rem] shadow-xl flex flex-col items-center justify-center p-8 border border-gray-100">
-                <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-blue-600 rounded-3xl shadow-lg flex items-center justify-center mb-8 transform -rotate-3 transition-transform hover:rotate-0 duration-300">
-                  <ArrowRightLeft size={48} className="text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Hotspot Share</h3>
-                <div className="w-16 h-1 bg-primary-100 rounded-full mb-8"></div>
-                
-                {/* Transfer Animation Mockup */}
-                <div className="w-full max-w-xs space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-green-100 p-2 rounded-lg text-green-600">
-                        <Smartphone size={20} />
-                      </div>
-                      <div className="text-sm font-medium">My Phone</div>
-                    </div>
-                    <div className="relative w-16 h-1 bg-gray-200 rounded-full overflow-hidden">
-                      <div className="absolute top-0 left-0 h-full bg-primary-500 rounded-full w-full animate-[progress_2s_ease-in-out_infinite]"></div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-sm font-medium">PC</div>
-                      <div className="bg-blue-100 p-2 rounded-lg text-blue-600">
-                        <Monitor size={20} />
-                      </div>
-                    </div>
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* Background glow effect */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-primary-400/20 to-blue-400/20 rounded-3xl blur-2xl"></div>
+              
+              {/* PC Dashboard Screenshot */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200/50 bg-white">
+                <div className="bg-gray-800 px-4 py-2.5 flex items-center gap-2">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                  </div>
+                  <div className="flex-1 text-center">
+                    <span className="text-xs text-gray-400 font-mono">10.193.86.240:8080</span>
                   </div>
                 </div>
+                <img 
+                  src="/image.png" 
+                  alt="HotspotShare PC Dashboard - File Transfer Interface" 
+                  className="w-full h-auto block"
+                />
               </div>
+
+              {/* Floating mobile screenshot */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="absolute -bottom-8 -right-4 lg:-right-8 w-28 sm:w-36 rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+              >
+                <img 
+                  src="/t.jpg" 
+                  alt="HotspotShare Mobile App - Server Running" 
+                  className="w-full h-auto block"
+                />
+              </motion.div>
             </div>
           </motion.div>
           
