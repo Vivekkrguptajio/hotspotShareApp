@@ -13,9 +13,9 @@ const HeroSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-          
+
           {/* Text Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -28,16 +28,16 @@ const HeroSection = () => {
               </span>
               No Internet Required
             </div>
-            
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6 tracking-tight">
               Fast Phone to PC File Transfer using <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-blue-400">WiFi Hotspot</span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Transfer files between your phone and computer instantly without internet. 
+              Transfer files between your phone and computer instantly without internet.
               Hotspot Share makes sharing your photos, videos, and documents seamless and secure.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
                 href="/HotspotShare.apk"
@@ -57,16 +57,16 @@ const HeroSection = () => {
                 Google Drive
               </a>
             </div>
-            
+
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-4 text-sm font-medium text-gray-500">
               <span className="flex items-center gap-1"><Smartphone size={16} /> Android</span>
-              <span>•</span>
+              <span>&bull;</span>
               <span className="flex items-center gap-1"><Monitor size={16} /> Windows PC</span>
             </div>
           </motion.div>
-          
+
           {/* Visual/Image Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -75,7 +75,7 @@ const HeroSection = () => {
             <div className="relative w-full max-w-lg mx-auto">
               {/* Background glow effect */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary-400/20 to-blue-400/20 rounded-3xl blur-2xl"></div>
-              
+
               {/* PC Dashboard Screenshot */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200/50 bg-white">
                 <div className="bg-gray-800 px-4 py-2.5 flex items-center gap-2">
@@ -88,9 +88,9 @@ const HeroSection = () => {
                     <span className="text-xs text-gray-400 font-mono">10.193.86.240:8080</span>
                   </div>
                 </div>
-                <img 
-                  src="/image.png" 
-                  alt="HotspotShare PC Dashboard - File Transfer Interface" 
+                <img
+                  src="/image.png"
+                  alt="HotspotShare PC Dashboard - File Transfer Interface"
                   className="w-full h-auto block"
                 />
               </div>
@@ -102,15 +102,15 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="absolute -bottom-8 -right-4 lg:-right-8 w-28 sm:w-36 rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
               >
-                <img 
-                  src="/t.jpeg" 
-                  alt="HotspotShare Mobile App - Server Running" 
+                <img
+                  src="/t.jpeg"
+                  alt="HotspotShare Mobile App - Server Running"
                   className="w-full h-auto block"
                 />
               </motion.div>
             </div>
           </motion.div>
-          
+
         </div>
       </div>
     </section>

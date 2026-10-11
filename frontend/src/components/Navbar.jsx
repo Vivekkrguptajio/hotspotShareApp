@@ -15,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-{ name: 'Features', href: '#features' },
+    { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Screenshots', href: '#screenshots' },
   ];
@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             <span className="font-bold text-xl text-gray-900 tracking-tight">Hotspot Share</span>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

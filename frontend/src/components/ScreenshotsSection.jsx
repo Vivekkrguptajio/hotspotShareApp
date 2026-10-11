@@ -15,12 +15,12 @@ const PhoneFrame = ({ imgSrc, alt, delay, rotate }) => (
       <div className="absolute top-0 inset-x-0 flex justify-center z-10">
         <div className="w-28 h-5 bg-gray-900 rounded-b-2xl"></div>
       </div>
-      
+
       {/* Screen with real screenshot */}
       <div className="rounded-[2rem] overflow-hidden bg-white">
-        <img 
-          src={imgSrc} 
-          alt={alt} 
+        <img
+          src={imgSrc}
+          alt={alt}
           className="w-full h-auto block"
         />
       </div>
@@ -43,17 +43,17 @@ const ScreenshotsSection = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4 lg:gap-16 px-4">
-          <PhoneFrame 
-            imgSrc="/s.jpeg" 
-            alt="HotspotShare App - Start Server Screen" 
-            delay={0.1} 
-            rotate="md:-rotate-6 md:translate-y-8" 
+          <PhoneFrame
+            imgSrc="/s.jpeg"
+            alt="HotspotShare App - Start Server Screen"
+            delay={0.1}
+            rotate="md:-rotate-6 md:translate-y-8"
           />
-          <PhoneFrame 
-            imgSrc="/t.jpeg" 
-            alt="HotspotShare App - Server Running Screen" 
-            delay={0.3} 
-            rotate="z-10 md:scale-105" 
+          <PhoneFrame
+            imgSrc="/t.jpeg"
+            alt="HotspotShare App - Server Running Screen"
+            delay={0.3}
+            rotate="z-10 md:scale-105"
           />
         </div>
 
@@ -80,9 +80,9 @@ const ScreenshotsSection = () => {
                 </div>
               </div>
             </div>
-            <img 
-              src="/image.png" 
-              alt="HotspotShare PC Dashboard - Manage and Transfer Files" 
+            <img
+              src="/image.png"
+              alt="HotspotShare PC Dashboard - Manage and Transfer Files"
               className="w-full h-auto block"
             />
           </div>

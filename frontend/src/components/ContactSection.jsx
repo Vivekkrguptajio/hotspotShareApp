@@ -9,7 +9,7 @@ const ContactSection = () => {
         <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8">
           Need Help or Have Feedback?
         </h3>
-        
+
         <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
           We are always looking to improve Hotspot Share. If you encounter any issues, have feature requests, or just want to say hello, feel free to reach out.
         </p>
