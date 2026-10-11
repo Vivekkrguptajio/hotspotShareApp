@@ -26,36 +26,38 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-24 bg-white">
+    <section id="how-it-works" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-sm font-semibold text-primary-600 tracking-wide uppercase mb-3">Simple Process</h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900">
-            How Hotspot Share Works
-          </h3>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="section-heading">Simple Process</h2>
+          <h3 className="section-title">How Hotspot Share Works</h3>
+        </motion.div>
 
         <div className="relative">
-          {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gray-200"></div>
+          <div className="hidden lg:block absolute top-10 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-primary-200 to-transparent"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
+                transition={{ duration: 0.4, delay: index * 0.12 }}
                 className="relative flex flex-col items-center text-center group"
               >
-                {/* Number Circle */}
-                <div className="w-24 h-24 rounded-full bg-white border-4 border-primary-100 flex items-center justify-center mb-6 relative z-10 shadow-sm group-hover:border-primary-500 transition-colors duration-300">
-                  <span className="text-3xl font-black text-primary-600">{step.number}</span>
+                <div className="w-20 h-20 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-6 relative z-10 group-hover:border-primary-200 group-hover:shadow-md transition-all duration-300">
+                  <span className="text-2xl font-black text-primary-600">{step.number}</span>
                 </div>
-                
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h4>
-                <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
+
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h4>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-xs mx-auto">
                   {step.description}
                 </p>
               </motion.div>
